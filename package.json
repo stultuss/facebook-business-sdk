@@ -1,5 +1,5 @@
 {
-  "name": "facebook-nodejs-business-sdk",
+  "name": "facebook-business-sdk-ts",
   "version": "9.0.1",
   "description": "SDK for the Facebook Ads API in Javascript and Node.js",
   "author": "Facebook",
@@ -23,7 +23,8 @@
     "amd",
     "requirejs",
     "umd",
-    "promises"
+    "promises",
+    "typescript"
   ],
   "repository": {
     "type": "git",
