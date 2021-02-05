@@ -536,12 +536,14 @@ export default class AdAccount extends AbstractCrudObject {
   }
 
   createAdVideo (fields: Array<string>, params: Object = {}): Promise<AdVideo> {
-    return this.createEdge(
-      '/advideos',
-      fields,
-      params,
-      AdVideo
-    );
+    // return this.createEdge(
+    //   '/advideos',
+    //   fields,
+    //   params,
+    //   AdVideo
+    // );
+    const vo = new AdVideo(null, params, this.getParentId(), this.getApi());
+    return vo.create();
   }
 
   getAffectedAdSets (fields: Array<string>, params: Object = {}, fetchFirstPage: boolean = true): Cursor | Promise<*> {
