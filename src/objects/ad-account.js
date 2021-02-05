@@ -542,8 +542,7 @@ export default class AdAccount extends AbstractCrudObject {
     //   params,
     //   AdVideo
     // );
-    const vo = new AdVideo(null, params, this.getParentId(), this.getApi());
-    return vo.create();
+    return (new AdVideo(null, params, this.getParentId(), this.getApi())).create();
   }
 
   getAffectedAdSets (fields: Array<string>, params: Object = {}, fetchFirstPage: boolean = true): Cursor | Promise<*> {
